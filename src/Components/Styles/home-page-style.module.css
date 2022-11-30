@@ -1,0 +1,126 @@
+
+
+.show-modal {
+  font-size: 2rem;
+  font-weight: 600;
+  padding: 1.75rem 3.5rem;
+  margin: 5rem 2rem;
+  border: none;
+  background-color: #fff;
+  color: #444;
+  border-radius: 10rem;
+  cursor: pointer;
+}
+
+.closemodal {
+  position: absolute;
+  top: 1.2rem;
+  right: 2rem;
+  font-size: 16px;
+  color: #333;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+.hidden {
+  display: none;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%;
+
+  background-color: white;
+  padding: 6rem;
+  border-radius: 15px;
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+  z-index: 10;
+}
+
+.modalLogin {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20%;
+
+  background-color: white;
+  padding: 5rem;
+  border-radius: 15px;
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+  z-index: 10;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(3px);
+  z-index: 5;
+}
+
+.signinButton {
+  border: none;
+  background-color: inherit;
+  padding: 14px 18px;
+  cursor: pointer;
+  font-size: 16px;
+  display: inline-block;
+  color: #ff4d4d;
+  border: none;
+  background-color: inherit;
+  padding: 14px 28px;
+  cursor: pointer;
+  font-size: 16px;
+  display: inline-block;
+}
+
+.signinButton:hover {
+  background-color: #eee;
+}
+
+.signupButton {
+  border: none;
+  background-color: inherit;
+  padding: 14px 28px;
+  cursor: pointer;
+  font-size: 16px;
+  display: inline-block;
+  border: none;
+  background-color: #eb6769ff;
+  padding: 14px 18px;
+  cursor: pointer;
+  font-size: 16px;
+  display: inline-block;
+  color:white;
+  border-radius:6px
+}
+
+.signupButton:hover {
+  border: none;
+  background-color: #e7474aff;
+  padding: 14px 18px;
+  cursor: pointer;
+  font-size: 16px;
+  display: inline-block;
+  color:white;
+  border-radius:6px
+}
+
+.NavbarButtons{
+  flex:1;
+  display:flex;
+  justify-content:left;
+}
+
+.SigninButtons{
+  display:flex;
+  justify-content:right;
+}

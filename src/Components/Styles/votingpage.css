@@ -1,0 +1,25 @@
+.candidate {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    margin-left: 60px;
+    margin-right: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #DEE1E6FF;
+    /* padding: 40px; */
+  }
+
+  /* .candidate .radioButton {
+    margin-left: auto;
+    margin-right: auto;
+  } */
+
+  /* .candidate .candidateName {
+    justify-content: left;
+  }
+
+  .candidate .candidateAbout {
+    justify-content: right;
+  } */
