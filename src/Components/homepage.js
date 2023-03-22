@@ -28,42 +28,22 @@ function ModalWindowOne({ closeModal }) {
         >
           &times;
         </Button>
-        <h1>I'm a modal window One</h1>
+        <h1>Features</h1>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
-        </p>
-      </div>
-      <div className={styles.overlay}></div>
-    </div>
-  );
-}
-function ModalWindowTwo({ closeModal }) {
-  return (
-    <div>
-      <div className={styles.modal}>
-        <Button
-          onClick={() => {
-            closeModal(false);
-          }}
-          className={styles.closemodal}
-        >
-          &times;
-        </Button>
-        <h1>I'm a modal window Two</h1>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
+          <ul>
+            <li>
+              <h3>Easy to use</h3>
+            </li>
+            <li>
+              <h3>Rich user interface</h3>
+            </li>
+            <li>
+              <h3>Safe and reliable</h3>
+            </li>
+            <li>
+              <h3>Direct Login for Voters</h3>
+            </li>
+          </ul>
         </p>
       </div>
       <div className={styles.overlay}></div>
@@ -82,15 +62,14 @@ function ModalWindowThree({ closeModal }) {
         >
           &times;
         </Button>
-        <h1>I'm a modal window Three</h1>
+        <h1>About Us</h1>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
+          <h3>
+            We are a team of 3 engineering students.
+            <br />
+            This was created with a vision of providing a hassle-free and simple
+            election solution.
+          </h3>
         </p>
       </div>
       <div className={styles.overlay}></div>
@@ -109,15 +88,19 @@ function ModalWindowFour({ closeModal }) {
         >
           &times;
         </Button>
-        <h1>I'm a modal window Four</h1>
+        <h1>Contact</h1>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
+          <ul>
+            <li>
+              <h3>V Naga Saketh - sakethvunka@gmail.com</h3>
+            </li>
+            <li>
+              <h3>Mohammed Adnan Zaki - zaki.adnan6@gmail.com</h3>
+            </li>
+            <li>
+              <h3>Sai Kashyap - saicashyap@gmail.com</h3>
+            </li>
+          </ul>
         </p>
       </div>
       <div className={styles.overlay}></div>
@@ -168,7 +151,6 @@ function MainHome() {
   const navigate = useNavigate();
 
   const [openModal1, setOpenModal1] = useState(false);
-  const [openModal2, setOpenModal2] = useState(false);
   const [openModal3, setOpenModal3] = useState(false);
   const [openModal4, setOpenModal4] = useState(false);
 
@@ -193,13 +175,6 @@ function MainHome() {
             }}
           >
             Features
-          </Button>
-          <Button
-            onClick={() => {
-              setOpenModal2(true);
-            }}
-          >
-            Pricing
           </Button>
           <Button
             onClick={() => {
@@ -246,7 +221,6 @@ function MainHome() {
         <img style={{ width: "80%" }} src={img} />
       </div>
       {openModal1 && <ModalWindowOne closeModal={setOpenModal1} />}
-      {openModal2 && <ModalWindowTwo closeModal={setOpenModal2} />}
       {openModal3 && <ModalWindowThree closeModal={setOpenModal3} />}
       {openModal4 && <ModalWindowFour closeModal={setOpenModal4} />}
       {chooseLogin && <ChooseLogin closeModal={setChooseLogin} />}

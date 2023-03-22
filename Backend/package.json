@@ -7,5 +7,8 @@
     "start": "nodemon server.js"
   },
   "author": "Adnan Zaki",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "mongodb": "^5.1.0"
+  }
 }

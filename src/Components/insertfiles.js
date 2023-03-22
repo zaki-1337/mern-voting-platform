@@ -51,7 +51,7 @@ const Home = (props) => {
     if (voterDetails && candidateDetails) {
       alert("Files were uploaded successfully!");
       setDone(true);
-    } else alert("Upload files first! here");
+    } else alert("Upload files first!");
   };
 
   return (

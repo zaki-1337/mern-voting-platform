@@ -1,10 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import styles from "./Styles/votingpage.module.css";
 import "./Styles/votingpage.css";
 import styled from "styled-components";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import { click } from "@testing-library/user-event/dist/click";
 
 const Button = styled.button`
   padding: 5px 14px;
@@ -38,6 +37,15 @@ let candidateC = "";
 
 function VotingControls() {
   const navigate = useNavigate();
+
+  axios
+    .post(
+      "http://localhost:3001/app/authuser",
+      window.location.pathname.split("/")[2]
+    )
+    .then((response) => {
+      console.log("hello");
+    });
 
   const handleSubmit = () => {
     if (candidateC === "") return alert("Please select a candidate.");
@@ -99,7 +107,7 @@ function VotingControls() {
         style={{ display: "flex", flexDirection: "column", marginLeft: "8%" }}
       >
         <div className={styles.text}>Controls</div>
-        <div className={styles.post}>Post: Administrator</div>
+        {/* <div className={styles.post}>Post: Administrator</div> */}
       </div>
 
       <div

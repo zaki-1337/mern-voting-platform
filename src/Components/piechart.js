@@ -3,6 +3,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import Chart from "./piechartL";
 import * as htmlToImage from "html-to-image";
+import imgRes from "./Images/resultpage.jpeg";
 
 import styles from "./Styles/piechart.module.css";
 
@@ -36,7 +37,7 @@ const Pichart = (props) => {
 
     for (var i = 0; i < data.length; ++i) {
       htmlToImage.toPng(data[i]).then((dataUrl) => {
-        saveAs(dataUrl, "my-node.png");
+        saveAs(dataUrl, "results.png");
       });
     }
   };
@@ -61,7 +62,8 @@ const Pichart = (props) => {
     overflow-y: hidden;
     overflow-x: hidden;
     width: 100%;
-    box-sizing: inherit; }
+    box-sizing: inherit;
+    background-color: white; }
 `,
         }}
       />
@@ -72,7 +74,10 @@ const Pichart = (props) => {
           <div className={styles.headerMenu}>Results</div>
         </div>
       </div>
-      <div className={`${styles.pichartContainer} + resultChart`}>
+      <div
+        style={{ backgroundColor: "white" }}
+        className={`${styles.pichartContainer} + resultChart`}
+      >
         <h1 className={styles.pichartText}>
           <span className={styles.text}>Result</span>
           <br></br>
@@ -96,11 +101,7 @@ const Pichart = (props) => {
           <span className={`${styles.pichartText6} winText`}>
             candidate 3 won the election
           </span>
-          <img
-            alt=""
-            src="https://play.teleporthq.io/static/svg/default-img.svg"
-            className={styles.pichartImage1}
-          />
+          <img alt="" src={imgRes} className={styles.pichartImage1} />
           <div
             style={{
               marginTop: "230px",
